@@ -1,0 +1,364 @@
+<div class="checkbox-wrapper-18">
+  <div class="round">
+    <input type="checkbox" id="checkbox-18" />
+    <label for="checkbox-18"></label>
+  </div>
+</div>
+
+<style>
+  .checkbox-wrapper-18 .round {
+    position: relative;
+  }
+
+  .checkbox-wrapper-18 .round label {
+    background-color: #0d2136;
+    border: 2px solid #bb9e68;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    display: block;
+  }
+
+  .checkbox-wrapper-18 .round label:after {
+    border: 0px solid #bb9e68;
+    border-top: none;
+    border-right: none;
+    content: "";
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label {
+    background-color: #bb9e68;
+    border-color: #bb9e68;
+  }
+
+  .checkbox-wrapper-18 .round input[type="checkbox"]:checked + label:after {
+    opacity: 1;
+  }
+body {
+      background-color: #1e1e1e;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #111;
+      color: #f0f0f0;
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .content-wrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .sheet-container {
+      position: relative;
+      width: 800px;
+      height: 1200px;
+      background-image: url("images/Metaliias-blank.png");
+      background-size: cover;
+      background-position: top center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+   .stat-field {
+  font-family: 'Gloock', serif;
+  color: #0d2136;
+  position: absolute;
+  width: 50px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+}
+	.stat-field2 {
+  font-family: 'Gloock', serif;
+  color: #0d2136;
+  position: absolute;
+  width: 50px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  text-align: center;
+}
+.stat-field3 {
+  font-family: 'Gloock', serif;
+  color: #0d2136;
+  position: absolute;
+  width: 50px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  text-align: center;
+}
+
+
+    /* Adjust top/left values based on your sheet layout */
+    #spd {
+      top: 294px;
+      left: 110px;
+    }
+	#hp {
+      top: 295px;
+      left: 219px;
+    }
+#hpedit {
+      top: 288px;
+      left: 248px;
+    }
+
+    #mp {
+      top: 295px;
+      left: 371px;
+    }
+#mpedit {
+      top: 288px;
+      left: 405px;
+    }
+	#sp {
+      top: 295px;
+      left: 529px;
+    }
+#spedit {
+      top: 288px;
+      left: 562px;
+    }
+#xpedit {
+      top: 288px;
+      left: 690px;
+    }
+
+
+	#fort {
+      top: 492px;
+      left: 390px;
+    }
+	#ref {
+      top: 547px;
+      left: 390px;
+    }
+	#will {
+      top: 603px;
+      left: 390px;
+    }
+#dr {
+      top: 350px;
+      left: 381px;
+    }
+#mr {
+      top: 395px;
+      left: 381px;
+}
+#str {
+      top: 353px;
+      left: 135px;
+    }
+#dex {
+      top: 394px;
+      left: 135px;
+    }
+#agl {
+      top: 435px;
+      left: 135px;
+    }
+#con {
+      top: 477px;
+      left: 135px;
+    }
+#wis {
+      top: 519px;
+      left: 135px;
+    }
+#per {
+      top: 560px;
+      left: 135px;
+    }
+#cha {
+      top: 602px;
+      left: 135px;
+    }
+/* Remove number input arrows on Chrome/Safari */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove number input arrows on Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.stat-total {
+	font-family: 'Gloock', serif;
+  position: absolute;
+  font-family: sans-serif;
+  color: #0d2136;
+}
+
+.stat-total .whole {
+	font-family: 'Gloock', serif;
+  font-size: 36px;
+  font-weight: bold;
+	color: #0d2136;
+}
+
+.stat-total .decimal {
+	font-family: 'Gloock', serif;
+  font-size: 14px;
+  color: #0d2136;
+  margin-left: 2px;
+}
+.button-12 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  background: #6E6D70;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+  color: #DFDEDF;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-12:focus {
+  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+.name-field {
+  position: absolute;
+  top: 160px;
+  left: 250px;
+  width: 300px;
+  font-family: 'Gloock', serif;
+  font-size: 24px;
+  color: #0d2136;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+#player-name {
+  top: 160px;
+  left: 250px;
+}
+#char-name {
+	top: 224px;
+  left: 290px;
+}
+.note-field {
+  position: absolute;
+  top: 160px;
+  left: 250px;
+  font-family: 'Gloock', serif;
+  font-size: 12px;
+  color: #0d2136;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+#BGperk {
+	top: 372px;
+  left: 471px;
+	width: 250px;
+	height: 50px;
+}
+#attribute {
+	top: 472px;
+  left: 471px;
+	width: 250px;
+	height: 160px;
+}
+#spells {
+	top: 695px;
+  left: 85px;
+	width: 285px;
+	height: 160px;
+}
+#skills {
+	top: 695px;
+  left: 427px;
+	width: 290px;
+	height: 160px;
+}
+#inventory {
+	top: 908px;
+  left: 85px;
+	width: 633px;
+	height: 160px;
+}
+
+.editable-table {
+  border-collapse: collapse;
+  width: 285px;
+  height: auto;
+  font-family: 'Gloock', serif;
+  font-size: 8px;
+  color: #0d2136;
+  border: 1px solid #bb9e68;
+}
+
+.editable-table th, .editable-table td {
+  border: 1px solid #bb9e68;
+  padding: 2px;
+  text-align: left;
+  min-width: 100px;
+}
+.editable-table td {
+  border: 1px solid #bb9e68;
+  padding: 2px 2px;         /* Adjust padding as needed */
+  text-align: left;
+  min-width: 100px;
+  min-height: 12px;         /* This is key for vertical size */
+  height: 12px;             /* Ensures non-collapsing empty cells */
+  vertical-align: top;
+}
+.editable-table th:nth-child(1),
+.editable-table td:nth-child(1) {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+}
+.editable-table th:nth-child(2),
+.editable-table td:nth-child(2) {
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+}
+.editable-table th:nth-child(3),
+.editable-table td:nth-child(3) {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+.table-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #bb9e68;
+}
+
+</style>
+/* CSS Document */
+
