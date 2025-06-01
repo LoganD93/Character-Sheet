@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>Metaliias Character Sheet</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    Metaliias Interactive Character Sheet
+	  <div style="margin-top: 1rem; display: flex; gap: 10px; justify-content: center;">
+  <button id="download-json" class="button-12" role="button">Download Stats</button>
+  <label for="upload-json" class="button-12" role="button" style="cursor: pointer;">Upload Stats</label>
+		  <input type="file" id="upload-json" accept=".json">
+</div>
+  </div>
+	
+  <div class="content-wrapper">
+    <div class="sheet-container">
+		<input type="text" id="player-name" class="name-field" placeholder="Player Name">
+		<input type="text" id="char-name" class="name-field" placeholder="Character Name">
+		
+		
+		<input type="number" id="spd" class="stat-field" placeholder="SPD" readonly>
+		<input type="number" id="hp" class="stat-field" placeholder="HP" readonly>
+		<input type="number" id="hpedit" class="stat-field3" step="any" placeholder="HP" value="0">
+		<input type="number" id="mp" class="stat-field" placeholder="MP" readonly>
+		<input type="number" id="mpedit" class="stat-field3" step="any" placeholder="MP" value="0">
+		<input type="number" id="sp" class="stat-field" placeholder="SP" readonly>
+		<input type="number" id="spedit" class="stat-field3" step="any" placeholder="SP" value="0">
+		<input type="number" id="xpedit" class="stat-field3" step="any" placeholder="XP" value="0">
+      
+		<input type="number" id="str" class="stat-field" step="any" placeholder="STR" value="0">		
+<input type="number" id="str-bonus" class="stat-field2" step="any" value="0" placeholder="STR Bonus" style="top: 372px; left: 138px;">
+		<div id="str-total" class="stat-total" style="top: 352px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		
+		<input type="number" id="dex" class="stat-field" placeholder="DEX" value="0">
+		<input type="number" id="dex-bonus" class="stat-field2" step="any" value="0" placeholder="DEX Bonus" style="top: 414px; left: 138px;">
+		<div id="dex-total" class="stat-total" style="top: 393px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="agl" class="stat-field" placeholder="AGL" value="0">
+		<input type="number" id="agl-bonus" class="stat-field2" step="any" value="0" placeholder="AGL Bonus" style="top: 456px; left: 138px;">
+		<div id="agl-total" class="stat-total" style="top: 434px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="con" class="stat-field" step="any" placeholder="CON" value="0">
+		<input type="number" id="con-bonus" class="stat-field2" step="any" value="0" placeholder="CON Bonus" style="top: 498px; left: 138px;">
+		<div id="con-total" class="stat-total" style="top: 475px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="wis" class="stat-field" step="any" placeholder="WIS" value="0">
+		<input type="number" id="wis-bonus" class="stat-field2" step="any" value="0" placeholder="WIS Bonus" style="top: 540px; left: 138px;">
+		<div id="wis-total" class="stat-total" style="top: 516px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="per" class="stat-field" placeholder="PER" value="0">
+		<input type="number" id="per-bonus" class="stat-field2" step="any" value="0" placeholder="PER Bonus" style="top: 582px; left: 138px;">
+		<div id="per-total" class="stat-total" style="top: 558px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="cha" class="stat-field" placeholder="CHA" value="0">
+		<input type="number" id="cha-bonus" class="stat-field2" step="any" value="0" placeholder="CHA Bonus" style="top: 624px; left: 138px;">
+		<div id="cha-total" class="stat-total" style="top: 600px; left: 176px;">
+  <span class="whole">0</span><span class="decimal">.0</span>
+</div>
+		<input type="number" id="fort" class="stat-field3" placeholder="fort" readonly>
+		<input type="number" id="fort-bonus" class="stat-field2" step="any" value="0" placeholder="FORT Bonus" style="top: 510px; left: 365px;">
+		<input type="number" id="ref" class="stat-field3" placeholder="ref" readonly>
+		<input type="number" id="ref-bonus" class="stat-field2" step="any" value="0" placeholder="REF Bonus" style="top: 565px; left: 365px;">
+		<input type="number" id="will" class="stat-field3" placeholder="will" readonly>
+		<input type="number" id="will-bonus" class="stat-field2" step="any" value="0" placeholder="WILL Bonus" style="top: 620px; left: 365px;">
+		
+		
+	<input type="number" id="dr" class="stat-field3" step="any" placeholder="DR" value="0">
+	<input type="number" id="mr" class="stat-field3" step="any" placeholder="MR" value="0">
+		<div class="table-scroll" style="position: absolute; top: 695px; left: 85px; width: 285px; height: 160px;">
+  <table class="editable-table" id="spells-table">
+    <thead>
+      <tr>
+        <th>Spell</th>
+        <th>Lvl</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <!-- more rows as needed -->
+    </tbody>
+	  
+  </table>
+</div>
+	<div class="table-scroll" style="position: absolute; top: 695px; left: 425px; width: 300px; height: 160px;">
+  <table class="editable-table" id="skills-table">
+    <thead>
+      <tr>
+        <th>Skill</th>
+        <th>Lvl</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		<tr>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+        <td contenteditable="true"></td>
+      </tr>
+		
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
+</div>	
+		<textarea id="BGperk" class="note-field" placeholder="Notes"></textarea>
+		<textarea id="attribute" class="note-field" placeholder="Notes"></textarea>
+		<table id="skills-table" class="editable-table" style="position: absolute; top: 695px; left: 82px;">
+			
+			
+			
+		<textarea id="inventory" class="note-field" placeholder="Notes"></textarea>
+		
+			
+
+  
+			
+			
+			
+		<div class="checkbox-wrapper-18">
+  <div class="round">
+    <input type="checkbox" id="checkbox-18" />
+    <label for="checkbox-18"></label>
+  </div>
+</div>
+    </div>	
+	</div>
+	
+ <script src="script.js"></script>
+</body>
+</html>
